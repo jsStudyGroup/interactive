@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+img { max-width: 100%; }
+
+.door-interactive { overflow: hidden; }
+
+.door-interactive .stage { position: relative; width: 100vw; height: 100vh; background-color: #333; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-content: center; align-content: center; -webkit-align-items: center; align-items: center; -webkit-flex-wrap: wrap; flex-wrap: wrap; padding: 10%; }
+
+.door-interactive .door { position: relative; width: 33.3%; height: 30%; }
+
+.door-interactive .door-back { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: #000; overflow: hidden; }
+
+.door-interactive .ilbuni { -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); position: absolute; left: 0; bottom: 0; width: 100%; height: 50%; background-repeat: no-repeat; background-position: center bottom; background-size: contain; transition: 0.3s 0.5s; }
+
+.door-interactive .door:nth-child(1) .ilbuni { background-image: url(img/ilbuni_0.png); }
+
+.door-interactive .door:nth-child(2) .ilbuni { background-image: url(img/ilbuni_1.png); }
+
+.door-interactive .door:nth-child(3) .ilbuni { background-image: url(img/ilbuni_2.png); }
+
+.door-interactive .door-body { position: absolute; left: 0; top: 0; right: 0; bottom: 0; transition: 0.5s; -webkit-transform-origin: 0 center; transform-origin: 0 center; }
+
+.door-interactive .door:nth-child(1) .door-body { background-color: rgba(255, 0, 0, 0.7); }
+
+.door-interactive .door:nth-child(2) .door-body { background-color: rgba(0, 255, 55, 0.7); }
+
+.door-interactive .door:nth-child(3) .door-body { background-color: rgba(0, 132, 255, 0.7); }
+
+.door-interactive .door.door-opened .door-body { -webkit-transform: perspective(800px) rotateY(-100deg); transform: perspective(800px) rotateY(-100deg); }
+
+.door-interactive .door.door-opened .ilbuni { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.scroll-interactive { height: 1000vh; background-color: #91d8d8; }
+
+.scroll-interactive .output { position: fixed; left: 0; top: 0; width: 100%; font-size: 1.2rem; font-weight: 200; color: #fff; background: rgba(0, 0, 0, 0.4); display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; line-height: 0; height: 40px; padding: 10px; z-index: 10; }
+
+.scroll-interactive .ilbuni { transition: 0.3s; position: absolute; left: 50%; bottom: 0; width: 100px; height: 100px; margin-left: -50px; background: url(img/ilbuni_0.png) no-repeat center center/contain; }
+
+.scroll-interactive .ilbuni.zoom { -webkit-transform: scale(2); transform: scale(2); }
+
+.transition-interactive .ball { width: 100px; height: 100px; border-radius: 50%; background-color: red; transition: 1s; }
+
+.transition-interactive .ball.end { background-color: dodgerblue; }
+
+@-webkit-keyframes ball-ani { from { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  to { -webkit-transform: translate(200px, 200px); transform: translate(200px, 200px); } }
+
+@keyframes ball-ani { from { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  to { -webkit-transform: translate(200px, 200px); transform: translate(200px, 200px); } }
+
+.animation-interactive .ball { width: 100px; height: 100px; border-radius: 50%; background-color: red; transition: 1s; }
+
+.animation-interactive .ball.end { background-color: dodgerblue; }
+/*# sourceMappingURL=event.css.map */
